@@ -9,31 +9,31 @@ nav:
     - 友情链接: links.md
   - CTF Write-Up:
       - 2018:
-          - 2018 RCTF: ctf_write_up\2018\2018rctf.md
+          - 2018 RCTF: docs\ctf_write_up\2018\2018rctf.md
       - 2019:
-          - 2019 Aurora内部赛: ctf_write_up\2019\2019aurora.md
-          - 2019 RCTF国际赛: ctf_write_up\2019\2019rctf.md
-          - 2019 *CTF: ctf_write_up\2019\2019starctf.md
-          - 2019 强网杯: ctf_write_up\2019\2019qwb.md
+          - 2019 Aurora内部赛: docs\ctf_write_up\2019\2019aurora.md
+          - 2019 RCTF国际赛: docs\ctf_write_up\2019\2019rctf.md
+          - 2019 *CTF: docs\ctf_write_up\2019\2019starctf.md
+          - 2019 强网杯: docs\ctf_write_up\2019\2019qwb.md
       - Exams:
           - BUUCTF:
-              - 简介: ctf_write_up\exams\buuctf\introduction.md
-              - MISC: ctf_write_up\exams\buuctf\misc.md
-              - Reverse: ctf_write_up\exams\buuctf\reverse.md
+              - 简介: docs\ctf_write_up\exams\buuctf\introduction.md
+              - MISC: docs\ctf_write_up\exams\buuctf\misc.md
+              - Reverse: docs\ctf_write_up\exams\buuctf\reverse.md
           - 旧版Bugku:
-              - 简介: ctf_write_up\exams\old_bugku\introduction.md
-              - Reverse: ctf_write_up\exams\old_bugku\reverse.md
+              - 简介: docs\ctf_write_up\exams\old_bugku\introduction.md
+              - Reverse: docs\ctf_write_up\exams\old_bugku\reverse.md
           - 实验吧:
-              - 简介: ctf_write_up\exams\shiyanba\introduction.md
-              - Reverse: ctf_write_up\exams\shiyanba\reverse.md
+              - 简介: docs\ctf_write_up\exams\shiyanba\introduction.md
+              - Reverse: docs\ctf_write_up\exams\shiyanba\reverse.md
   - CTF Tools:
-      - Xortool : ctf_tools\xortool.md
-      - IDA python: ctf_tools\ida_python.md
+      - Xortool : docs\ctf_tools\xortool.md
+      - IDA python: docs\ctf_tools\ida_python.md
   - MISC:
-    - python脚本: misc\python_script.md
-    - 大端序和小端序: misc\big_little_ending.md
+    - python脚本: docs\misc\python_script.md
+    - 大端序和小端序: docs\misc\big_little_ending.md
     - 提问的智慧:
-        - 简介: misc\how_to_ask_questions_the_smart_way\introduction.md
+        - 简介: docs\misc\how_to_ask_questions_the_smart_way\introduction.md
         - 在提问之前: misc\how_to_ask_questions_the_smart_way\before_you_ask.md
         - 当你在提问时: misc\how_to_ask_questions_the_smart_way\when_you_ask.md
         - 如何解读答案: misc\how_to_ask_questions_the_smart_way\how_to_interpret_answers.md
