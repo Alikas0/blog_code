@@ -31,7 +31,6 @@ nav:
       - IDA python: ctf_tools/ida_python.md
   - MISC:
     - python脚本: misc/python_script.md
-    - 大端序和小端序: misc/big_little_ending.md
     - 提问的智慧:
         - 简介: misc/how_to_ask_questions_the_smart_way/introduction.md
         - 在提问之前: misc/how_to_ask_questions_the_smart_way/before_you_ask.md
@@ -49,6 +48,11 @@ nav:
       - 子系统优化: misc/wsl/optimization.md
       - 杂七杂八问题: misc/wsl/questions.md
       - 参考资料: misc/wsl/reference.md
+  - Notes:
+      - 大端序和小端序: notes/big_little_ending.md
+      - C++:
+         - 笔记: notes/cpp/cpp.md
+         - 关键字(保留字): notes/cpp/keywords.md
 
 theme:
   favicon: 'https://raw.githubusercontent.com/Alikas0/files/master/videos/favicon.png'
