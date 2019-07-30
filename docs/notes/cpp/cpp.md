@@ -116,6 +116,6 @@ Stream 流
     
     - 不可以使用[保留字](https://alikas.cf/notes/cpp/keyname/)
 
-## 2.数据类型
+### 2.数据类型
 
 ![](https://raw.githubusercontent.com/Alikas0/files/master/img/20190730143642.png)
