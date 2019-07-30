@@ -1,0 +1,18 @@
+language: python
+python:
+- 3.5
+install:
+  - pip install mkdocs
+  - pip install mkdocs-material
+script:
+  - mkdocs build --clean
+after_success:  |
+  if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+    cd site
+    git init
+    git add .
+    git -c user.name=Alikas0 -c user.email=$2674318405@qq.com commit -m "Auto Deployment"
+    git push -f -q https://$Alikas0:$GITHUB_API_KEY@github.com/Alikas0/Alikas0.github.io master
+    cd "$TRAVIS_BUILD_DIR"
+  fi
