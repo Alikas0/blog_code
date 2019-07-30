@@ -1,0 +1,1318 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://blog.alikas.cf/misc/big_little_ending/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="https://raw.githubusercontent.com/Alikas0/files/master/videos/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>大端序和小端序 - Alikas|station</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://blog.alikas.cf" title="Alikas|station" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">border_color</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Alikas|station
+            </span>
+            <span class="md-header-nav__topic">
+              
+                大端序和小端序
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Alikas0/Alikas0.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Alikas0.github.io
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://blog.alikas.cf" title="Alikas|station" class="md-nav__button md-logo">
+      
+        <i class="md-icon">border_color</i>
+      
+    </a>
+    Alikas|station
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Alikas0/Alikas0.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Alikas0.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Homepage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Homepage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/" title="友情链接" class="md-nav__link">
+      友情链接
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      CTF Write-Up
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        CTF Write-Up
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/2018/2018rctf/" title="2018 RCTF" class="md-nav__link">
+      2018 RCTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/2019/2019aurora/" title="2019 Aurora内部赛" class="md-nav__link">
+      2019 Aurora内部赛
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/2019/2019rctf/" title="2019 RCTF国际赛" class="md-nav__link">
+      2019 RCTF国际赛
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/2019/2019starctf/" title="2019 *CTF" class="md-nav__link">
+      2019 *CTF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/2019/2019qwb/" title="2019 强网杯" class="md-nav__link">
+      2019 强网杯
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Exams
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Exams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-1" type="checkbox" id="nav-2-3-1">
+    
+    <label class="md-nav__link" for="nav-2-3-1">
+      BUUCTF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-1">
+        BUUCTF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/buuctf/introduction/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/buuctf/misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/buuctf/reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2">
+    
+    <label class="md-nav__link" for="nav-2-3-2">
+      旧版Bugku
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-2">
+        旧版Bugku
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/old_bugku/introduction/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/old_bugku/reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3">
+    
+    <label class="md-nav__link" for="nav-2-3-3">
+      实验吧
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-3">
+        实验吧
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/shiyanba/introduction/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_write_up/exams/shiyanba/reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      CTF Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        CTF Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_tools/xortool/" title="Xortool" class="md-nav__link">
+      Xortool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_tools/ida_python/" title="IDA python" class="md-nav__link">
+      IDA python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      MISC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        MISC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_script/" title="python脚本" class="md-nav__link">
+      python脚本
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        大端序和小端序
+      </label>
+    
+    <a href="./" title="大端序和小端序" class="md-nav__link md-nav__link--active">
+      大端序和小端序
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="大端模式和小端模式的起源" class="md-nav__link">
+    大端模式和小端模式的起源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-endianlittle-endian" title="Big-Endian和Little-Endian的定义如下" class="md-nav__link">
+    Big-Endian和Little-Endian的定义如下
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="数组在大端小端情况下的存储" class="md-nav__link">
+    数组在大端小端情况下的存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="为什么会有大小端模式之分" class="md-nav__link">
+    为什么会有大小端模式之分
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      提问的智慧
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        提问的智慧
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/introduction/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/before_you_ask/" title="在提问之前" class="md-nav__link">
+      在提问之前
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/when_you_ask/" title="当你在提问时" class="md-nav__link">
+      当你在提问时
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/how_to_interpret_answers/" title="如何解读答案" class="md-nav__link">
+      如何解读答案
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/on_not_reacting_like_loser/" title="如何避免扮演失败者" class="md-nav__link">
+      如何避免扮演失败者
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/questions_not_to_ask/" title="不该问的问题" class="md-nav__link">
+      不该问的问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/good_and_bad_questions/" title="好问题与蠢问题" class="md-nav__link">
+      好问题与蠢问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/if_you_cant_get_an_answer/" title="如果得不到回答" class="md-nav__link">
+      如果得不到回答
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/how_to_answer_questions_in_a_helpful_way/" title="如何更好地回答问题" class="md-nav__link">
+      如何更好地回答问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how_to_ask_questions_the_smart_way/how_to_ask_questions_the_smart_way/" title="完整版" class="md-nav__link">
+      完整版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Install WSL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Install WSL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/install/" title="安装" class="md-nav__link">
+      安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/mklink/" title="mklink软链接到非系统盘" class="md-nav__link">
+      mklink软链接到非系统盘
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/optimization/" title="子系统优化" class="md-nav__link">
+      子系统优化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/questions/" title="杂七杂八问题" class="md-nav__link">
+      杂七杂八问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wsl/reference/" title="参考资料" class="md-nav__link">
+      参考资料
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="大端模式和小端模式的起源" class="md-nav__link">
+    大端模式和小端模式的起源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-endianlittle-endian" title="Big-Endian和Little-Endian的定义如下" class="md-nav__link">
+    Big-Endian和Little-Endian的定义如下
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="数组在大端小端情况下的存储" class="md-nav__link">
+    数组在大端小端情况下的存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="为什么会有大小端模式之分" class="md-nav__link">
+    为什么会有大小端模式之分
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Alikas0/Alikas0.github.io/edit/master/docs/misc/big_little_ending.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>大端序和小端序</h1>
+                
+                <h2 id="_1">大端模式和小端模式的起源</h2>
+<p>关于大端小端名词的由来，有一个有趣的故事，来自于Jonathan Swift的《格利佛游记》：
+Lilliput和Blefuscu这两个强国在过去的36个月中一直在苦战。战争的原因：大家都知道，
+吃鸡蛋的时候，原始的方法是打破鸡蛋较大的一端，可以那时的皇帝的祖父由于小时侯吃鸡蛋，
+按这种方法把手指弄破了，因此他的父亲，就下令，命令所有的子民吃鸡蛋的时候，
+必须先打破鸡蛋较小的一端，违令者重罚。然后老百姓对此法令极为反感，期间发生了多次叛乱，
+其中一个皇帝因此送命，另一个丢了王位，产生叛乱的原因就是另一个国家Blefuscu的国王大臣煽动起来的，叛乱平息后，就逃到这个帝国避难。据估计，先后几次有11000余人情愿死也不肯去
+打破鸡蛋较小的端吃鸡蛋。这个其实讽刺当时英国和法国之间持续的冲突。</p>
+<p>Danny Cohen一位网络协议的开创者，第一次使用这两个术语指代字节顺序，后来就被大家广泛接受。</p>
+<h2 id="big-endianlittle-endian">Big-Endian和Little-Endian的定义如下</h2>
+<p>1) Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。</p>
+<p>2) Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。</p>
+<p>举一个例子，比如数字0x12 34 56 78在内存中的表示形式为：</p>
+<p>1)大端模式：</p>
+<table>
+<thead>
+<tr>
+<th>低地址</th>
+<th align="left"></th>
+<th></th>
+<th>高地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x12</td>
+<td align="left">0x34</td>
+<td>0x56</td>
+<td>0x78</td>
+</tr>
+</tbody>
+</table>
+<p>2)小端模式：</p>
+<table>
+<thead>
+<tr>
+<th>低地址</th>
+<th></th>
+<th></th>
+<th>高地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x78</td>
+<td>0x56</td>
+<td>0x34</td>
+<td>0x12</td>
+</tr>
+</tbody>
+</table>
+<p>可见，大端模式和字符串的存储模式类似。</p>
+<p>3)下面是两个具体例子：</p>
+<p>16bit宽的数0x1234在Little-endian模式（以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：    </p>
+<table>
+<thead>
+<tr>
+<th align="left"><em>内存地址</em></th>
+<th>小端模式存放内容</th>
+<th>大端模式存放内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><em>0x4000</em></td>
+<td>0x34</td>
+<td>0x12</td>
+</tr>
+<tr>
+<td align="left"><em>0x4001</em></td>
+<td>0x12</td>
+<td>0x34</td>
+</tr>
+</tbody>
+</table>
+<p>·32bit宽的数0x12345678在Little-endian模式以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：</p>
+<table>
+<thead>
+<tr>
+<th align="left"><em>内存地址</em></th>
+<th>小端模式存放内容</th>
+<th>大端模式存放内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><em>0x400</em></td>
+<td>0x78</td>
+<td>0x12</td>
+</tr>
+<tr>
+<td align="left"><em>0x4001</em></td>
+<td>0x56</td>
+<td>0x34</td>
+</tr>
+<tr>
+<td align="left"><em>0x4002</em></td>
+<td>0x34</td>
+<td>0x56</td>
+</tr>
+<tr>
+<td align="left"><em>0x4003</em></td>
+<td>0x12</td>
+<td>0x78</td>
+</tr>
+</tbody>
+</table>
+<p>4)大端小端没有谁优谁劣，各自优势便是对方劣势：</p>
+<p>小端模式 ：强制转换数据不需要调整字节内容，1、2、4字节的存储方式一样。</p>
+<p>大端模式 ：符号位的判定固定为第一个字节，容易判断正负。</p>
+<h2 id="_2">数组在大端小端情况下的存储</h2>
+<p>以unsigned int value = 0x12345678为例，分别看看在两种字节序下其存储情况，我们可以用unsigned char buf[4]来表示value：</p>
+<p>Big-Endian: 低地址存放高位，如下：</p>
+<table>
+<thead>
+<tr>
+<th>高地址</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buf[3] (0x78)</td>
+<td>低位</td>
+</tr>
+<tr>
+<td>buf[2] (0x56)</td>
+<td></td>
+</tr>
+<tr>
+<td>buf[1] (0x34)</td>
+<td></td>
+</tr>
+<tr>
+<td>buf[0] (0x12)</td>
+<td>高位</td>
+</tr>
+<tr>
+<td>低地址</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Little-Endian: 低地址存放低位，如下：</p>
+<table>
+<thead>
+<tr>
+<th>高地址</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buf[3] (0x12)</td>
+<td>高位</td>
+</tr>
+<tr>
+<td>buf[2] (0x34)</td>
+<td></td>
+</tr>
+<tr>
+<td>buf[1] (0x56)</td>
+<td></td>
+</tr>
+<tr>
+<td>buf[0] (0x78)</td>
+<td>低位</td>
+</tr>
+<tr>
+<td>低地址</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">为什么会有大小端模式之分</h2>
+<p>这是因为在计算机系统中，我们是以字节为单位的，每个地址单元都对应着一个字节，一个字节为8bit。
+但是在C语言中除了8bit的char之外，还有16bit的short型，32bit的long型（要看具体的编译器），
+另外，对于位数大于8位的处理器，例如16位或者32位的处理器，由于寄存器宽度大于一个字节，
+那么必然存在着一个如果将多个字节安排的问题。因此就导致了大端存储模式和小端存储模式。
+例如一个16bit的short型x，在内存中的地址为0x0010，x的值为0x1122，那么0x11为高字节，
+0x22为低字节。对于大端模式，就将0x11放在低地址中，即0x0010中，0x22放在高地址中，
+即0x0011中。小端模式，刚好相反。我们常用的X86结构是小端模式，而KEIL C51则为大端模式。
+很多的ARM，DSP都为小端模式。有些ARM处理器还可以由硬件来选择是大端模式还是小端模式。</p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/ce123_zhouwei/article/details/6971544">https://blog.csdn.net/ce123_zhouwei/article/details/6971544</a>
+<a href="http://radishes.top/2018/10/07/2018-10-07-小端模式和大端模式">http://radishes.top/2018/10/07/2018-10-07-小端模式和大端模式</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_script/" title="python脚本" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                python脚本
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../how_to_ask_questions_the_smart_way/introduction/" title="简介" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                简介
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/Alikas0" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://t.me/Alikas" class="md-footer-social__link fa fa-telegram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
