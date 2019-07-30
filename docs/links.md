@@ -1,4 +1,3 @@
-##友情链接
 *排名不分先后*
 
 domain:https://blog.52szu.tech
