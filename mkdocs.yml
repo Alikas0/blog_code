@@ -3,15 +3,15 @@ site_url: 'https://blog.alikas.cf'
 repo_name: 'Alikas0.github.io'
 repo_url: 'https://github.com/Alikas0/Alikas0.github.io'
 
-nav:
+pages:
   - Homepage:
     - 主页: index.md
     - 友情链接: links.md
   - CTF Write-Up:
       - 2018:
-          - 2018 RCTF: 'ctf_write_up\2018\2018rctf.md'
+          - 2018 RCTF: ctf_write_up\2018\2018rctf.md
       - 2019:
-          - 2019 Aurora内部赛: 'ctf_write_up\2019\2019aurora.md'
+          - 2019 Aurora内部赛: ctf_write_up\2019\2019aurora.md
           - 2019 RCTF国际赛: ctf_write_up\2019\2019rctf.md
           - 2019 *CTF: ctf_write_up\2019\2019starctf.md
           - 2019 强网杯: ctf_write_up\2019\2019qwb.md
