@@ -441,7 +441,6 @@ pls input the first passwd(1): 123321
 continue...
 
 pls input the first passwd(2):
-
 ```
 
 ### 第二次
@@ -1200,5 +1199,3 @@ int get_key(unsigned int a1,unsigned int a2){
 ```
 
 `get_key(3,4)`,解出来`flag:202030cc203002`是错误的，随即陷入自闭，待以后再吧.....如果有师傅能予以指导，我将不胜感激！
-
-# 

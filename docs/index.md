@@ -2,7 +2,7 @@
 
 本站的主要内容是CTF Writeup，各种学习记录，并会更新一些工具的使用以及各种好玩的东西。
 
-博客基于[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)搭建，评论功能使用了Gitalk，感谢[@domain](https://blog.52szu.tech/)大佬的帮助
+博客基于[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)搭建，感谢[@domain](https://blog.52szu.tech/)大佬的帮助
 
 ##关于我
 
