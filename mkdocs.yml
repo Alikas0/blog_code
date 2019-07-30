@@ -9,7 +9,7 @@ nav:
     - 友情链接: links.md
   - CTF Write-Up:
       - 2018:
-          - 2018 RCTF: "ctf_write_up\2018\2018rctf.md"
+          - 2018 RCTF: 'ctf_write_up\2018\2018rctf.md'
       - 2019:
           - 2019 Aurora内部赛: ctf_write_up\2019\2019aurora.md
           - 2019 RCTF国际赛: ctf_write_up\2019\2019rctf.md
