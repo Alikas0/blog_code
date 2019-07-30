@@ -4,12 +4,16 @@
 
 博客基于[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)搭建，感谢[@domain](https://blog.52szu.tech/)大佬的帮助
 
-##关于我
+<div align=life> 
+<iframe frameborder="no" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=438981337&auto=0&height=66"></iframe>
+</div>
+
+## 关于我
 
 - 逆向新手，日常爆零
 - 目前大一，日常划水
 
-##联系我
+## 联系我
 
 电子邮件: l2674318405@gmail.com
 

@@ -58,7 +58,7 @@ theme:
   name: 'material'
   palette:
     primary: 'white'
-    accent: 'indigo'
+    accent: 'Lime'
 
 extra:
   social:
