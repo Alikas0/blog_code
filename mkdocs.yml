@@ -1,4 +1,4 @@
-site_name: 'Alikas|station'
+site_name: 'Alikas’station'
 site_url: 'https://blog.alikas.cf'
 repo_name: 'blog_code'
 repo_url: 'https://github.com/Alikas0/blog_code'
@@ -70,10 +70,12 @@ extra:
     - type: 'github'
       link: 'https://github.com/Alikas0'
     - type: 'telegram'
-      link: 'https://t.me/Alikas'
+      link: 'https://t.me/Alikas0'
 
 extra_javascript:
   - 'js/extra.js'
+  - 'js/gitalk.min.js'
+  - 'js/md5.min.js'
 
 markdown_extensions:
   - admonition
