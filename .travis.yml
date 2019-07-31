@@ -3,8 +3,8 @@ python:
 - 3.5
 install:
   - pip install mkdocs
-  - pip install mkdocs-material
 script:
+  - cd blog_code
   - mkdocs build --clean
 after_success:  |
   if [ -n "$GITHUB_API_KEY" ]; then
