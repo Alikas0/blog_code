@@ -77,6 +77,9 @@ extra_javascript:
   - 'js/gitalk.min.js'
   - 'js/md5.min.js'
 
+extra_css:
+  - 'css/gitalk.css'
+
 markdown_extensions:
   - admonition
   - codehilite:
