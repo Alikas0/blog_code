@@ -75,3 +75,12 @@ def printAllResult(ciphertext):
 ciphertext = raw_input("Please input the words :")
 printAllResult(ciphertext)
 ```
+
+##二进制转字符串
+
+```python3
+import libum
+s = ''
+s = int(s,2)
+print(libunm.n2s(s))
+```
