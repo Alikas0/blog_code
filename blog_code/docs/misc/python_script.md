@@ -88,7 +88,6 @@ print(libunm.n2s(s))
 ## 扩展欧几里得算法
 
 ```python
-#-*-coding:utf-8-*- 
 # 扩展欧几里得算法
 def egcd(a, b):
     x, lastX = 0, 1
