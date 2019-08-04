@@ -126,7 +126,9 @@ IDA Python API::https://www.hex-rays.com/products/ida/support/idapython_docs/
 遍历结构体成员
 
 >DecodePrecedingInstruction(ea) 
->DecodePreviousInstruction(ea)
+
+>DecodePreviousInstruction(ea) 
+
 >DecodeInstruction(ea)
 
 获取指令结构
@@ -184,23 +186,39 @@ IDA Python API::https://www.hex-rays.com/products/ida/support/idapython_docs/
 创建数据
 
 >MakeByte(ea)
+>
 >MakeWord(ea)
+>
 >MakeDWord(ea)
+>
 >MakeQWord(ea)
+>
 >MakeOWord(ea)
+>
 >MakeYWord(ea)
+>
 >MakeFlot(ea)
+>
 >MakeDouble(ea)
+>
 >MakePackReal(ea)
+>
 >MakeTbyte(ea)
+>
 >MakeStructEx(ea)
+>
 >MakeCustomDataEx(ea)
 
 >PatchByte(ea, value)
+>
 >PatchWord(ea, value)
+>
 >PatchDword(ea, value)
+>
 >PatchByte(ea, value)
+>
 >PatchByte(ea, value)
+>
 
 修改程序字节
 
@@ -209,11 +227,15 @@ IDA Python API::https://www.hex-rays.com/products/ida/support/idapython_docs/
 将地址解释为Byte
 
 >Word(ea)
+>
 >DWord(ea)
+>
 >QWord(ea)
 
 >GetFloat(ea)
+>
 >GetDouble(ea)
+>
 >GetString(ea, length = -1, strtype = ASCSTR_C) 
 
 获取字符串

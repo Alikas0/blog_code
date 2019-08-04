@@ -30,6 +30,7 @@ nav:
       - Xortool : ctf_tools/xortool.md
       - IDA python: ctf_tools/ida_python.md
   - MISC:
+    - Ubuntu18.04 64位编译32位程序问题: misc/gcc_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
     - python脚本: misc/python_script.md
     - 提问的智慧:
