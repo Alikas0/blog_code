@@ -1,10 +1,11 @@
-IDApython常见函数<!--more-->
 
-介绍转载自https://www.cnblogs.com/0xHack/p/9399321.html
+IDApython常见函数
 
-英文文档:https://www.hex-rays.com/products/ida/support/idapython_docs/
+介绍转载自https://www.cnblogs.com/0xHack/p/9399321.html,例子会持续更新补充。
 
-例子持续更新。
+IDA Python API::https://www.hex-rays.com/products/ida/support/idapython_docs/
+
+
 
 - 2019.7.25 更新例子: *CTF 2019 Matr1x
 
