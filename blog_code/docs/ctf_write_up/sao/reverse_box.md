@@ -3,6 +3,8 @@
 
 ## reverse_box
 
+题目: [reverse_box](https://github.com/Alikas0/CTF/blob/master/challenges/reverse_box/reverse_box.zip)
+
 ### 弱鸡的Alikas的操作
 
 > dump出v7和v8,爆破randnum
