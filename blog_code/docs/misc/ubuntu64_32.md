@@ -1,5 +1,22 @@
 
-## 背景
+## 安装&&运行
+
+ubuntu 64位版本，安装支持32位程序的二进制库。
+
+```text
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install zlib1g:i386 libstdc++6:i386 libc6:i386
+```
+
+如果你使用的是比较老的ubuntu版本，可以安装ia32-libs来解决此问题。 
+
+```text
+sudo apt-get install ia32-libs 
+```
+
+
+## 编译
 
 学习PWN Canary时，64位Ubuntu编译32位程序报错
 
