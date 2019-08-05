@@ -26,6 +26,7 @@ nav:
           - 实验吧:
               - 简介: ctf_write_up/exams/shiyanba/introduction.md
               - Reverse: ctf_write_up/exams/shiyanba/reverse.md
+      - SAO: ctf_write_up/sao/reverse_box.md
   - CTF Tools:
       - Xortool : ctf_tools/xortool.md
       - IDA python: ctf_tools/ida_python.md
