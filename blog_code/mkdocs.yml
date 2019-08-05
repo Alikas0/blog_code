@@ -52,7 +52,7 @@ nav:
       - 参考资料: misc/wsl/reference.md
   - Notes:
       - Pwn :
-          - 函数 : notes/function.md
+          - 函数 : notes/pwn/function.md
       - 大端序和小端序: notes/big_little_ending.md
       - C++:
          - 笔记: notes/cpp/cpp.md
