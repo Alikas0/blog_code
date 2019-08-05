@@ -114,7 +114,7 @@ Stream 流
     
     - 变量名不难包含除_以外的特殊字符，如 ： %、#、逗号、空格等
     
-    - 不可以使用[保留字](https://alikas.cf/notes/cpp/keyname/)
+    - 不可以使用[保留字](./keywords.md)
 
 ### 2.数据类型
 
