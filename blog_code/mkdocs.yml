@@ -33,8 +33,11 @@ nav:
       - IDA python: ctf_tools/ida_python.md
   - SZU OJ Solution:
       - 数据结构:
-          - DS堆栈--逆序输出（STL栈使用）: szu_oj/data_structure/1031.md
-          - DS堆栈--行编辑: szu_oj/data_structure/1033.md
+          - 简介: szu_oj/data_structure/introdution.md
+          - 链表和栈:
+            - DS堆栈--逆序输出（STL栈使用）: szu_oj/data_structure/1029/1031.md
+            - DS堆栈--行编辑: szu_oj/data_structure/1029/1033.md
+            - DS堆栈--字符替换: szu_oj/data_structure/1029/1036.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
