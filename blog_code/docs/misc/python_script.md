@@ -2,7 +2,7 @@
 
 整理一些用过的python脚本
 
-##计算文件md5
+## 计算文件md5
 
 ```python
 fp = open("file.txt","rb")
@@ -13,7 +13,7 @@ md5 = str(hash_code).lower()
 fp.close()
 ```
 
-##计算字符串md5
+## 计算字符串md5
 
 ```python
 def md5(str):
@@ -23,7 +23,9 @@ def md5(str):
     return m.hexdigest()
 ```
 
-##C语言rand()
+## C语言rand()
+
+- Windows版
 
 ```python
 def rand():
@@ -32,7 +34,7 @@ def rand():
         return (seed >> 16) & 0x7FFF
 ```
 
-##凯撒密码26次
+## 凯撒密码26次
 
 ```python
 #coding:utf-8
@@ -76,7 +78,7 @@ ciphertext = raw_input("Please input the words :")
 printAllResult(ciphertext)
 ```
 
-##二进制转字符串
+## 二进制转字符串
 
 ```python3
 import libum
@@ -88,7 +90,6 @@ print(libunm.n2s(s))
 ## 扩展欧几里得算法
 
 ```python
-# 扩展欧几里得算法
 def egcd(a, b):
     x, lastX = 0, 1
     y, lastY = 1, 0
