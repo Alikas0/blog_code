@@ -34,6 +34,16 @@ nav:
   - SZU OJ Solution:
       - 数据结构:
           - 简介: szu_oj/data_structure/introdution.md
+          - 顺序表:
+              - DS顺序表--类实现: szu_oj/data_structure/1003/1017.md
+              - DS顺序表--连续操作: szu_oj/data_structure/1003/1018.md
+              - DS顺序表--合并操作: szu_oj/data_structure/1003/1019.md
+              - DS顺序表之循环移位: szu_oj/data_structure/1003/1020.md
+          - 单链表:
+              - DS单链表--类实现: szu_oj/data_structure/1017/1021.md
+              - DS单链表--结点交换: szu_oj/data_structure/1017/1022.md
+              - DS单链表--合并: szu_oj/data_structure/1017/1023.md
+              - DS循环链表—约瑟夫环(Ver. I - A): szu_oj/data_structure/1017/1029.md
           - 链表和栈:
             - DS堆栈--逆序输出（STL栈使用）: szu_oj/data_structure/1029/1031.md
             - DS堆栈--行编辑: szu_oj/data_structure/1029/1033.md
