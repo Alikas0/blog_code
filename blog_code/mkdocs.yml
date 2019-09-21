@@ -30,6 +30,9 @@ nav:
   - CTF Tools:
       - Xortool : ctf_tools/xortool.md
       - IDA python: ctf_tools/ida_python.md
+  - SZU OJ Solution:
+      - 数据结构:
+          - DS堆栈--行编辑: szu_oj\data_structure\1033.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
