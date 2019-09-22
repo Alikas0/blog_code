@@ -49,6 +49,7 @@ nav:
             - DS堆栈--行编辑: szu_oj/data_structure/1029/1033.md
             - DS堆栈--字符替换: szu_oj/data_structure/1029/1036.md
             - DS线性表—多项式相加: szu_oj/data_structure/1029/1024.md
+            -  DS链表—学生宿舍管理: szu_oj/data_structure/1029/1025.md
             - DS双向链表—祖玛: szu_oj/data_structure/1029/1109.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
