@@ -49,8 +49,14 @@ nav:
             - DS堆栈--行编辑: szu_oj/data_structure/1029/1033.md
             - DS堆栈--字符替换: szu_oj/data_structure/1029/1036.md
             - DS线性表—多项式相加: szu_oj/data_structure/1029/1024.md
-            -  DS链表—学生宿舍管理: szu_oj/data_structure/1029/1025.md
+            - DS链表—学生宿舍管理: szu_oj/data_structure/1029/1025.md
             - DS双向链表—祖玛: szu_oj/data_structure/1029/1109.md
+          -  栈:
+               - DS堆栈--括号匹配: szu_oj/data_structure/1049/1034.md
+               - DS栈—排队游戏: szu_oj/data_structure/1049/1040.md
+               - DS栈--Web导航: szu_oj/data_structure/1049/1041.md
+               - DS堆栈--表达式计算: szu_oj/data_structure/1049/1035.md
+               - DS堆栈--迷宫求解: szu_oj/data_structure/1049/1032.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
