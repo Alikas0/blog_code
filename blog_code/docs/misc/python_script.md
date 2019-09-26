@@ -5,6 +5,7 @@
 ## 计算文件md5
 
 ```python
+import hashlib
 fp = open("file.txt","rb")
 md5_obj = hashlib.md5()
 md5_obj.update(fp.read())
