@@ -29,6 +29,7 @@ nav:
               - Reverse: ctf_write_up/exams/shiyanba/reverse.md
       - SAO: ctf_write_up/sao/reverse_box.md
   - CTF Tools:
+      - Z3 : ctf_tools/z3.md
       - Xortool : ctf_tools/xortool.md
       - IDA python: ctf_tools/ida_python.md
   - SZU OJ Solution:
