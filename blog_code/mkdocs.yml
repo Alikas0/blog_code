@@ -64,6 +64,12 @@ nav:
               - DS队列+堆栈--数制转换: szu_oj/data_structure/1062/1038.md
               - DS队列--组队列: szu_oj/data_structure/1062/1039.md
               - DS队列----银行单队列多窗口模拟: szu_oj/data_structure/1062/1113.md
+          - 串应用:
+              - DS串应用--KMP算法: szu_oj/data_structure/1070/1043.md
+              - DS串应用--串替换: szu_oj/data_structure/1070/1044.md
+              - DS串应用—最长重复子串: szu_oj/data_structure/1070/1046.md
+              - 串应用- 计算一个串的最长的真前后缀: szu_oj/data_structure/1070/1045.md
+              - 子串循环问题 (Ver. I): szu_oj/data_structure/1070/1047.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
