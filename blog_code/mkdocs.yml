@@ -1,4 +1,4 @@
-site_name: 'Alikas’station'
+site_name: 'Latern’station'
 site_url: 'https://blog.alikas.cf'
 repo_name: 'blog_code'
 repo_url: 'https://github.com/Alikas0/blog_code/tree/master/blog_code'
@@ -52,12 +52,18 @@ nav:
             - DS线性表—多项式相加: szu_oj/data_structure/1029/1024.md
             - DS链表—学生宿舍管理: szu_oj/data_structure/1029/1025.md
             - DS双向链表—祖玛: szu_oj/data_structure/1029/1109.md
-          -  栈:
+          - 栈:
                - DS堆栈--括号匹配: szu_oj/data_structure/1049/1034.md
                - DS栈—排队游戏: szu_oj/data_structure/1049/1040.md
                - DS栈--Web导航: szu_oj/data_structure/1049/1041.md
                - DS堆栈--表达式计算: szu_oj/data_structure/1049/1035.md
                - DS堆栈--迷宫求解: szu_oj/data_structure/1049/1032.md
+          - 队列:
+              - DS队列之银行排队: szu_oj/data_structure/1062/1037.md
+              - DS队列----银行简单模拟: szu_oj/data_structure/1062/1112.md
+              - DS队列+堆栈--数制转换: szu_oj/data_structure/1062/1038.md
+              - DS队列--组队列: szu_oj/data_structure/1062/1039.md
+              - DS队列----银行单队列多窗口模拟: szu_oj/data_structure/1062/1113.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
