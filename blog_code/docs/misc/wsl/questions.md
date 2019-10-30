@@ -57,24 +57,3 @@ aptitude 与 apt-get 一样，是 Debian 及其衍生系统中功能极其强大
   **apt-get 解决得更好的地方： source（aptitude无此功能）, build-dep （低版本的aptitude没有build-dep功能）*
 
   *apt-get 跟 aptitude 没什么区别的地方：update, upgrade (apt-get upgrade=aptitude safe-upgrade, apt-get dist-upgrade=aptitude full-upgrgade)*
-
-  ### 3.GUI界面无法链接
-
-  提示
-
-  ```linux
-  /usr/lib/python2.7/dist-packages/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display
-    warnings.warn(str(e), _gtk.Warning)
-  Traceback (most recent call last):
-    File "/usr/bin/ccsm", line 94, in <module>
-      import ccm
-    File "/usr/lib/python2.7/dist-packages/ccm/__init__.py", line 1, in <module>
-      from ccm.Conflicts import *
-    File "/usr/lib/python2.7/dist-packages/ccm/Conflicts.py", line 26, in <module>
-      from ccm.Constants import *
-    File "/usr/lib/python2.7/dist-packages/ccm/Constants.py", line 30, in <module>
-      CurrentScreenNum = gtk.gdk.display_get_default().get_default_screen().get_number()
-  AttributeError: 'NoneType' object has no attribute 'get_default_screen'
-  ```
-
-  无法解决。
