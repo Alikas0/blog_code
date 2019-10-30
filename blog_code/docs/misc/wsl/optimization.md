@@ -2,10 +2,10 @@
 ## 1.更换apt源
 
 因为Linux子系统的apt源使用的是官方源，需要连接到国外的服务器。所以安装一些软件时下载会很慢，我们可以改用国内的镜像apt源。
- https://opsx.alibaba.com/mirror 阿里的镜像站
+ https://mirror.alibaba.com/ubuntu 阿里的镜像站
 !!! warning 
 
-    注意看版本代号， Ubuntu每个版本的代号都不一样
+    注意看版本代号， Ubuntu每个版本的代号都不一样！
 
 先进行一下备份。
 
