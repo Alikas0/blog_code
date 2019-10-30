@@ -2,47 +2,10 @@
 ## 1.更换apt源
 
 因为Linux子系统的apt源使用的是官方源，需要连接到国外的服务器。所以安装一些软件时下载会很慢，我们可以改用国内的镜像apt源。
- 国内的镜像源主要有：
- 阿里源
+ https://opsx.alibaba.com/mirror 阿里的镜像站
+!!! warning 
 
-```text
-deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
-```
-
-中科大源
-
-```text
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-```
-
-网易源
-
-```
-deb http://mirrors.163.com/ubuntu/ wily main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ wily-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ wily-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ wily-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ wily-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ wily main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ wily-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ wily-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ wily-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ wily-backports main restricted universe multiver
-```
-
-个人觉得科大源好用点0.0
+    注意看版本代号， Ubuntu每个版本的代号都不一样
 
 先进行一下备份。
 
