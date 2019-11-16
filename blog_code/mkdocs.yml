@@ -92,6 +92,7 @@ nav:
       - 杂七杂八问题: misc/wsl/questions.md
       - 参考资料: misc/wsl/reference.md
   - Notes:
+      - 静态/动态 链接: notes/dynamic_static_linking.md
       - Pwn :
           - 函数 : notes/pwn/function.md
       - 大端序和小端序: notes/big_little_ending.md
