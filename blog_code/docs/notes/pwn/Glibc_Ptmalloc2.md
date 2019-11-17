@@ -26,7 +26,7 @@ Heap和mmap区域都可以供用户自由使用，但在开始未映射到内存
  
  Stack区域是唯一不需要映射，用户却可以访问的内存区域， 这也是利用堆栈溢出进行攻击的基础
  
- ### 32 位模式下进程经典内存布局
+### 32 位模式下进程经典内存布局
  
  ![32位模式下进程内存经典布局](https://raw.githubusercontent.com/Alikas0/files/master/img/20191116165530.png)
  
@@ -34,17 +34,17 @@ Heap和mmap区域都可以供用户自由使用，但在开始未映射到内存
  
  这是由于32模式地址空间造成的， 所以内核引入了另一种虚拟地址空间布局的形式， 将在后面介绍。 但对于64位系统， 提供了巨大的虚拟地址空间， 这种布局就相当好。 
  
- ### 32 位模式下进程默认内存布局
+### 32 位模式下进程默认内存布局
  
  ![](https://raw.githubusercontent.com/Alikas0/files/master/img/20191117154156.png)
  
  这种布局是 Linux 内核 2.6.7 以后的默认进程内存布局形式，栈至顶向下扩展，并且栈是有界的。 堆至底向上扩展， mmap 映射区域至顶向下扩展， mmap 映射区域和堆相对扩展， 直到耗尽虚拟地址空间中的剩余区域， 这种结构便于 C [运行时库](https://zh.wikipedia.org/wiki/%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BA%93) 使用 mmap 映射区域和堆进行内存分配。
  
- ### 64 位模式下进程内存布局
+### 64 位模式下进程内存布局
  
  对 AMD64 系统， 内存布局采用经典布局， text 的起始地址为 0x0000000000400000， 堆紧接着BSS段向上增长， mmap 映射区域开始位置一般设为 TASK_SIZE/3
  
- ```c
+```c
 #define TASK_SIZE_MAX ((1UL << 47) - PAGE_SIZE)
 #define TASK_SIZE (test_thread_flag(TIF_IA32) ? \
  IA32_PAGE_OFFSET : TASK_SIZE_MAX)
@@ -57,6 +57,7 @@ Heap和mmap区域都可以供用户自由使用，但在开始未映射到内存
 ![X86_64 下 Linux 进程的默认内存布局形式](https://raw.githubusercontent.com/Alikas0/files/master/img/20191117162202.png)
 
 上图X86_64 下 Linux 进程的默认内存布局形式的示意图， 当前内核默认配置下， 进程的栈和mmap 映射区域 并不是从一个固定地址开始的， 并且每次启动时的值都不一样， 这是程序在启动时随机改变这些值的设置，使得使用缓冲区溢出进行攻击更加困难。
+
 当然也可以让进程的栈和 mmap 映射区域从一个固定位置开始，只需要设置全局变量 randomize_va_space 值为0 ， 这个变量默认值为 1 。 用户可以通过设置`proc/sys/kernel/randomize_va_space`来停用该特性，也可以用如下命令：
 
 ```text
@@ -74,11 +75,11 @@ $ sudo echo 0 >/proc/sys/kernel/randomize_va_space
     1 - 表示将mmap的基址，stack和vdso页面随机化
     2 - 表示在1的基础上增加栈（heap）的随机化
 
-## 操作系统内存分配的相关函数
+### 操作系统内存分配的相关函数
 
 - 对heap操作: 
     - 操作系统:`brk()`
-    - C运行时库:`sbrk()` 
+    - [C运行时库](https://blog.csdn.net/wqvbjhc/article/details/6612099):`sbrk()` 
 
 - 对mmap映射区域的操作
     - 操作系统`mmap()` 和 `munmap()`
@@ -91,11 +92,13 @@ Glibc同样是使用这些函数对操作系统申请虚拟内存
 
 Linux 内核在用户申请内存的时候，只是给它分配了一个线性区（也就是虚拟内存），并没有分配实际物理内存；只有当用户使用这块内存的时候，内核才会分配具体的物理页面给用户，这时候才占用宝贵的物理内存。内核释放物理页面是通过释放线性区，找到其所对应的物理页面，将其全部释放的过程。
 
-### Heap操作相关的函数
+#### Heap操作相关的函数
 
 Heap 操作函数主要有两个， brk()为系统调用， sbrk()为C库函数。 系统调用通常会提供一种最小功能， 而库函数通常提供比较复杂的功能。 Glibc的malloc族(realloc, calloc 等)就调用sbrk()函数将数据段下届移动，sbrk() 函数在内核的管理下将[虚拟地址空间](https://docs.microsoft.com/zh-cn/windows-hardware/drivers/gettingstarted/virtual-address-spaces)映射到内存，拱 malloc() 函数使用
 
-内核数据结构 mm_struct 中的成员变量 start_code 和 end_code 是进程代码段的起始和终止地址，start_data 和 end_data 是进程数据段的起始和终止地址，start_stack 是进程堆栈段起始地址，start_brk 是进程动态内存分配起始地址（堆的起始地址），还有一个 brk（堆的当前最后地址），就是动态内存分配当前的终止地址。C 语言的动态内存分配基本函数是malloc()，在 Linux 上的实现是通过内核的 brk 系统调用。brk()是一个非常简单的系统调用，只是简单地改变 mm_struct 结构的成员变量 brk 的值。
+内核数据结构mm_struct中的成员变量start_code和end_cod是进程代码段的起始和终止地址，start_data 和 end_data 是进程数据段的起始和终止地址，start_stack 是进程堆栈段起始地址，start_brk 是进程动态内存分配起始地址（堆的起始地址），还有一个 brk（堆的当前最后地址），就是动态内存分配当前的终止地址。
+
+C 语言的动态内存分配基本函数是malloc()，在 Linux 上的实现是通过内核的 brk 系统调用。brk()是一个非常简单的系统调用，只是简单地改变 mm_struct 结构的成员变量 brk 的值。
 
 函数定义如下:
 

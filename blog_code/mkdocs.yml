@@ -95,6 +95,7 @@ nav:
       - 静态/动态 链接: notes/dynamic_static_linking.md
       - Pwn :
           - 函数 : notes/pwn/function.md
+          - glibc内存管理ptmalloc源代码分析: notes/pwn/Glibc_Ptmalloc2.md
       - 大端序和小端序: notes/big_little_ending.md
       - C++:
          - 笔记: notes/cpp/cpp.md
