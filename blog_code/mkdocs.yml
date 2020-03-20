@@ -103,6 +103,8 @@ nav:
          - 笔记: notes/cpp/cpp.md
          - 关键字(保留字): notes/cpp/keywords.md
       - Base58: notes/base58.md
+      - 操作系统:
+          - fork(): notes/OS/fork.md
 
 theme:
   favicon: 'https://raw.githubusercontent.com/Alikas0/files/master/videos/favicon.png'
