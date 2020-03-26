@@ -72,6 +72,18 @@ nav:
               - DS串应用—最长重复子串: szu_oj/data_structure/1070/1046.md
               - 串应用- 计算一个串的最长的真前后缀: szu_oj/data_structure/1070/1045.md
               - 子串循环问题 (Ver. I): szu_oj/data_structure/1070/1047.md
+          - 二叉树及其应用:
+              - DS二叉树—二叉树构建与遍历（不含框架）: szu_oj/data_structure/1071/1050.md
+              - DS二叉树——二叉树之数组存储: szu_oj/data_structure/1071/1054.md
+              - DS二叉树--叶子数量: szu_oj/data_structure/1071/1051.md
+              - DS树--二叉树高度: szu_oj/data_structure/1071/1062.md
+              - DS二叉树——二叉树之父子结点: szu_oj/data_structure/1071/1053.md
+              - DS二叉树--层次遍历: szu_oj/data_structure/1071/1055.md
+          - Huffman树及其应用:
+              - DS二叉树——Huffman编码与解码（不含代码框架）: szu_oj/data_structure/1092/1060.md
+              - DS树--二叉树之最大路径: szu_oj/data_structure/1092/1063.md
+              - DS树--带权路径和: szu_oj/data_structure/1092/1061.md
+              - DS二叉树—二叉树镜面反转: szu_oj/data_structure/1092/1067.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md
