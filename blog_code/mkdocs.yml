@@ -84,6 +84,17 @@ nav:
               - DS树--二叉树之最大路径: szu_oj/data_structure/1092/1063.md
               - DS树--带权路径和: szu_oj/data_structure/1092/1061.md
               - DS二叉树—二叉树镜面反转: szu_oj/data_structure/1092/1067.md
+      - C++:
+          - 指针:
+              - 三数论大小（指针）: szu_oj/cplusplus/1256/1035.md
+              - 成绩查询（指针运算）: szu_oj/cplusplus/1256/1043.md
+              - 三串合一（指针与字符数组）: szu_oj/cplusplus/1256/1038.md
+              - 货币兑换（指针与常量）: szu_oj/cplusplus/1256/1036.md
+              - 密钥加密法（指针应用）: szu_oj/cplusplus/1256/1046.md
+              - 动态数组（指针与数组）: szu_oj/cplusplus/1256/1037.md
+              - 动态矩阵（指针与堆内存分配）: szu_oj/cplusplus/1256/1044.md
+              - 矩阵左转（指针与数组）: szu_oj/cplusplus/1256/1039.md
+              - 函数调用（函数指针）: szu_oj/cplusplus/1256/1045.md
   - MISC:
     - Ubuntu18.04 64位=>32位程序问题: misc/ubuntu64_32.md
     - Python SimpleHTTPServer: misc/python_http_server.md

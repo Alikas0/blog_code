@@ -1,6 +1,6 @@
 *排名不分先后*
 
-domain:https://blog.52szu.tech
+domain:https://chikorita.fun
 
 Apeng:https://apeng.fun
 
