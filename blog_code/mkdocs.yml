@@ -19,6 +19,7 @@ nav:
           - 2019 红帽杯: ctf_write_up/2019/2019redhat.md
       - 2020:
           - 2020 高校战疫: ctf_write_up/2020/2020gaoxiaozhanyi.md
+          - 2020 VolgaCTF: ctf_write_up/2020/2020volgactf.md
       - Exams:
           - BUUCTF:
               - 简介: ctf_write_up/exams/buuctf/introduction.md
